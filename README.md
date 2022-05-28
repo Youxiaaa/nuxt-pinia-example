@@ -1,4 +1,4 @@
-## Nuxt Pinia 使用範例
+# Nuxt Pinia 使用範例
 
 ## 使用套件
 - @nuxtjs/composition-api
