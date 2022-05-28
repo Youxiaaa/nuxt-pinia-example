@@ -1,6 +1,6 @@
 <template>
   <section class="bg-gradient-to-tr from-pink-300 to-purple-300 h-screen w-full flex flex-col gap-4 justify-center items-center">
-    <h1 class="font-bold text-4xl text-white">Pinia TodoList</h1>
+    <h1 v-pre class="font-bold text-4xl text-white">Pinia TodoList</h1>
     <div class="p-4 rounded-xl bg-white shadow-md w-80">
       <input v-model="newTodo" @keyup.enter="addTodo" type="text" class="w-full px-4 py-1.5 border-2 border-[#555] rounded-xl mb-4">
       <ul class="w-full flex items-center gap-4 mb-4">
@@ -32,7 +32,7 @@ import { todoStore } from '@/stores/todos.js'
 export default {
   name: 'IndexPage',
   setup() {
-    // 宣告 pimia store
+    // 宣告 pinia store
     const todoPinia = todoStore()
     
     // 使用 computed 和 pinia 的 getters 雙向綁定
