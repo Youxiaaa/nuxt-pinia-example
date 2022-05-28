@@ -11,10 +11,10 @@
       <ul class="flex flex-col gap-4">
         <li v-for="(item, idx) in filterTodos" :key="item.id" class="w-full flex items-center justify-between py-2 px-4 border-2 border-[#555] rounded-xl">
           <div class="flex items-center gap-2 text-[#555]">
-            <label for="completedId" class="w-5 h-5 rounded-full relative flex justify-center items-center border border-[#555]">
+            <label :for="'completedId' + item.id" class="w-5 h-5 rounded-full relative flex justify-center items-center border border-[#555]">
               <div :class="{'scale-100': item.isCompleted, 'scale-0': !item.isCompleted}" class="rounded-full w-3 h-3 bg-pink-300 duration-300"></div>
             </label>
-            <input v-model="item.isCompleted" id="completedId" type="checkbox" class="hidden">
+            <input v-model="item.isCompleted" :id="'completedId' + item.id" type="checkbox" class="hidden">
             <span>{{ idx + 1 }}.</span>
             <h2>{{ item.title }}</h2>
           </div>
